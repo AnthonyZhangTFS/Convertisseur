@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane fx:id="monPane" prefHeight="350.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="150.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b6dcff" height="64.0" layoutX="-4.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="507.0" />
+                        <Button fx:id="btnMass" layoutX="28.0" layoutY="116.0" mnemonicParsing="false" onAction="#changer" prefHeight="35.0" prefWidth="110.0" text="Mass">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <Button fx:id="btnVolume" layoutX="195.0" layoutY="116.0" mnemonicParsing="false" onAction="#changer" prefHeight="35.0" prefWidth="110.0" text="Volume">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <Button fx:id="btnLongeur" layoutX="361.0" layoutY="117.0" mnemonicParsing="false" onAction="#changer" prefHeight="34.0" prefWidth="110.0" text="Longeur">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <Text layoutX="138.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Des Tabs">
+                           <font>
+                              <Font name="Didot Bold" size="31.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="90.0" fitWidth="122.0" layoutX="22.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@weight-hi.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="99.0" fitWidth="88.0" layoutX="206.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@219-2195579_science-images-of-volume-clipart.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="114.0" fitWidth="147.0" layoutX="369.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@523-5231826_ruler-coloring-clipart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Mass">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtM1" layoutX="52.0" layoutY="118.0" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtM2" layoutX="281.0" layoutY="118.0" />
+                        <ComboBox fx:id="cboM1" layoutX="61.0" layoutY="173.0" onAction="#convert1M" prefWidth="150.0" />
+                        <ComboBox fx:id="cboM2" layoutX="290.0" layoutY="173.0" onAction="#convert2M" prefWidth="150.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8ffc9" height="64.0" layoutX="-3.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="507.0" />
+                        <Text layoutX="90.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur de Mass">
+                           <font>
+                              <Font name="Didot Bold" size="31.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="40.0" fitWidth="58.0" layoutX="224.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@333-3339360_arrows-directions-left-right-comments-bidirectional-arrow-clipart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Volume">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="106.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertiseur de Volume" textAlignment="CENTER" underline="true" wrappingWidth="287.91748046875">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtV1" layoutX="52.0" layoutY="118.0" />
+                        <TextField fx:id="txtV2" layoutX="281.0" layoutY="118.0" />
+                        <ComboBox fx:id="cboV1" layoutX="61.0" layoutY="173.0" onAction="#convert1V" prefWidth="150.0" />
+                        <ComboBox fx:id="cboV2" layoutX="290.0" layoutY="173.0" onAction="#convert2V" prefWidth="150.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eabaff" height="64.0" layoutX="-3.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="507.0" />
+                        <Text layoutX="69.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur de Volume">
+                           <font>
+                              <Font name="Didot Bold" size="31.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="40.0" fitWidth="58.0" layoutX="224.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@333-3339360_arrows-directions-left-right-comments-bidirectional-arrow-clipart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Longeur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="96.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertiseur de Longeur" textAlignment="CENTER" underline="true" wrappingWidth="308.91748046875">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtL1" layoutX="52.0" layoutY="118.0" />
+                        <TextField fx:id="txtL2" layoutX="281.0" layoutY="118.0" />
+                        <ComboBox fx:id="cboL1" layoutX="61.0" layoutY="173.0" onAction="#convert1L" prefWidth="150.0" />
+                        <ComboBox fx:id="cboL2" layoutX="290.0" layoutY="173.0" onAction="#convert2L" prefWidth="150.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffcfba" height="64.0" layoutX="-3.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="507.0" />
+                        <ImageView fitHeight="40.0" fitWidth="58.0" layoutX="224.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@333-3339360_arrows-directions-left-right-comments-bidirectional-arrow-clipart.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="63.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur de Longeur">
+                           <font>
+                              <Font name="Didot Bold" size="31.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
